@@ -5,9 +5,10 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { EmailNotificationModule } from './email-notification/email-notification.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { ApiModule } from './api/api.module';
 
 @Module({
-  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule],
+  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule, ApiModule],
   controllers: [AppController],
   providers: [AppService],
 })
