@@ -6,9 +6,10 @@ import { AuthModule } from './auth/auth.module';
 import { EmailNotificationModule } from './email-notification/email-notification.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { ApiModule } from './api/api.module';
+import { MailingModule } from './mailing/mailing.module';
 
 @Module({
-  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule, ApiModule],
+  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule, ApiModule, MailingModule],
   controllers: [AppController],
   providers: [AppService],
 })
