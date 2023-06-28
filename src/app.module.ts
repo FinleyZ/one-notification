@@ -7,9 +7,10 @@ import { EmailNotificationModule } from './email-notification/email-notification
 import { PrismaModule } from './prisma/prisma.module';
 import { ApiModule } from './api/api.module';
 import { MailingModule } from './mailing/mailing.module';
+import {ConfigModule} from "@nestjs/config";
 
 @Module({
-  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule, ApiModule, MailingModule],
+  imports: [UserModule, AuthModule, EmailNotificationModule, PrismaModule, ApiModule, MailingModule, ConfigModule.forRoot({isGlobal: true})],
   controllers: [AppController],
   providers: [AppService],
 })
